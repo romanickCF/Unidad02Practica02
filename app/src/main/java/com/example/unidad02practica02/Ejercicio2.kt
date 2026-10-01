@@ -1,10 +1,11 @@
 package com.example.unidad02practica02
 
 fun main(){
+    //Lista con tareas.
     val tareas= mutableListOf("Hacer deberes", "Sacar al perro", "Hacer la compra", "Lavar el coche")
 
 
-
+//Añadir tarea
     fun anadir(){
         println("Escribe la tarea que quieras añadir")
         val tarea = readln()
@@ -14,7 +15,7 @@ fun main(){
             println("No se ha podido añadir la tarea")
         }
     }
-
+//Mostrar lista de tareas
     fun listar(){
         println("===LISTA DE TAREAS===")
         for ((i,tarea) in tareas.withIndex()){
@@ -22,7 +23,7 @@ fun main(){
         }
         println()
     }
-
+//Muestra las tareas no marcadas con X
     fun pendientes(){
             println("===TAREAS PENDIENTES===")
         var hayPendientes = false
@@ -35,11 +36,14 @@ fun main(){
         if(!hayPendientes){println("No hay tareas pendientes")}
         println()
     }
+
+    //Funcion para pedir el indice de la tarea y utilizar esta funcion dentro de otras
     fun pedirIndice() : Int{
         println("Indica el numero de la tarea")
         return readln().toInt()
     }
 
+    //Funcion para marcar las tareas y se muestren con  X y que se queden como completadas
     fun completar(){
         val indiceReal = pedirIndice() -1
 
@@ -51,7 +55,7 @@ fun main(){
             println("El numero de tarea no existe")
         }
     }
-
+    //Eliminar tarea segun indice.
     fun eliminar(){
 
         val indiceReal = pedirIndice() -1
