@@ -2,7 +2,10 @@ package com.example.unidad02practica02
 
 fun main(){
 
-    val texto = "Este es un texto de ejemplo"
+        //Pido el texto por teclado
+    println("Introduce el texto")
+    val texto = readln()
+
     val conteoLetras = texto.lowercase() // Convierte todo a minúsculas
         .filterNot { it.isWhitespace() } //Ignora Espacios
         .groupingBy { it } //Agrupo cada char
